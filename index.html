@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e70338b9bd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/tablet.css">
+    <link rel="stylesheet" href="styles/desktop.css">
+    <title>Misael Cunha - Portfólio</title>
+</head>
+<body>
+    <!-- HEADER DO SITE -->
+    <header>
+        <h3 id="logo">Misael Cunha</h3>
+
+        <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">menu</span>
+
+        <nav id="menus">
+            <span class="material-symbols-outlined" id="close-burguer" onclick="clickMenu()">close</span>
+            <ul>
+                <li class="nav-link"><a href="#inicio">Ínicio</a></li>
+                <li class="nav-link"><a href="#sobre-mim">Sobre</a></li>
+                <li class="nav-link"><a href="#habilidades">Habilidades</a></li>
+                <li class="nav-link"><a href="#projetos">Projetos</a></li>
+                <li class="nav-link"><a href="#contato">Contato</a></li>
+
+                <li class="nav-link" id="nav-cv"><a href=""><i class="fa-solid fa-file-arrow-down"></i>Baixar CV</a></li>
+            </ul>
+        </nav>
+
+        <a href="" id="cv-header"><i class="fa-solid fa-file-arrow-down"></i>Baixar CV</a>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <section id="inicio"> <!-- ÍNICIO DO SITE -->
+
+            <p id="in-apre">Olá, eu sou</p>
+            <h1>Misael <span>Cunha</span></h1>
+            <p id="in-funcao">Desenvolvedor Front-End</p>
+
+            <p id="in-info">Transformo ideias em experiências digitais incríveis. <br>
+                Sou apaixonado por tecnologia, design e por criar soluções que unem perfomance, acessibilidade e um bom visual.
+            </p>
+
+            <div id="in-links">
+                <a href="#projetos" class="in-link" id="in-projetos"><i class="fa-solid fa-diagram-project"></i> Ver meus projetos</a>
+                <a href="#contato" class="in-link" id="in-contato"><i class="fa-solid fa-address-book"></i> Entrar em contato</a>
+            </div>
+            
+            <div id="in-redes">
+                <a href="https://instagram.com/misaelmgcunha.dev" rel="nofollow" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/misael-cunha-8797a7259/" rel="nofollow" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Misaelmgcunha" rel="nofollow" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto: misaelmgcunha.dev@gmail.com" rel="nofollow" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+        </section> <!-- FIM DO ÍNICIO DO SITE -->
+
+
+        <section id="sobre-mim"> <!-- SOBRE MIM DO SITE -->
+            <div id="sm-info">
+                <h2>Sobre <span>mim</span></h2>
+
+                <img src="imgs/Misael.png" alt="Misael Cunha">
+
+                <p>
+                    Sou um desenvolvedor front-end em formação, com foco em criar interfaces modernas, responsivas e acessíveis. Tenho experiência com HTML e CSS, e estou sempre em busca de novos aprendizados para evoluir como profissional.
+                </p>
+
+                <div id="sm-extra">
+                    <div class="c-extra">
+                        <p class="it-extra"><i class="fa-solid fa-graduation-cap"></i> Em formação</p>
+                        <p class="ii-extra">JavaScript</p>
+                    </div>
+                    <div class="c-extra">
+                        <p class="it-extra"><i class="fa-solid fa-location-dot"></i> Local</p>
+                        <p class="ii-extra">Brasil, Bahia, Salvador</p>
+                    </div>
+                    <div class="c-extra">
+                        <p class="it-extra"><i class="fa-solid fa-user-check"></i> Disponível para</p>
+                        <p class="ii-extra">Projetos freelancer</p>
+                    </div>
+                </div>
+
+                <a href="">Me Conheça mais <i class="fa-solid fa-file-arrow-down"></i></a>
+            </div>
+        </section> <!-- FIM DO SOBRE-MIM DO SITE -->
+
+        <section id="habilidades"> <!-- HABILIDADES DO SITE -->
+            <h2>Minhas <span>habilidades</span></h2>
+            <p>Tecnologias que estou utilizando e estudando.</p>
+
+            <div id="hab-boxers">
+                <div class="hab-box" id="box-html">
+                    <img src="imgs/html5.svg" alt="HTML5">
+                    <h3>HTML</h3>
+                    <p>60%</p>
+                    <div class="barra">
+                        <div class="progresso"></div>
+                    </div>
+                </div>
+                <div class="hab-box" id="box-css">
+                    <img src="imgs/css3.svg" alt="CSS3">
+                    <h3>CSS</h3>
+                    <p>60%</p>
+                    <div class="barra">
+                        <div class="progresso"></div>
+                    </div>
+                </div>
+                <div class="hab-box" id="box-javascript">
+                    <img src="imgs/javascript.svg" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>20%</p>
+                    <div class="barra">
+                        <div class="progresso"></div>
+                    </div>
+                </div>
+                <div class="hab-box" id="box-git">
+                    <img src="imgs/git.svg" alt="Git">
+                    <h3>Git</h3>
+                    <p>40%</p>
+                    <div class="barra">
+                        <div class="progresso"></div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- FIM DO MINHAS HABILIDADES DO SITE -->
+
+        <section id="projetos"> <!-- PROJETOS DO SITE -->
+            <h2>Meus <span>Projetos</span></h2>
+
+            <div id="pr-projetos">
+                <div class="pr-projeto">
+                    <img src="imgs/projetos/advocacia.png" alt="Advocacia">
+                    <h3>Advocacia Roberto & Associados</h3>
+
+                    <div class="pr-tags">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+
+                    <p>
+                        Site institucional fictício para um escritório de advocacia, desenvolvido com HTML5 e CSS3, com design moderno, navegação intuitiva e layout responsivo.
+                    </p>
+
+                    <div id="pr-links">
+                        <a href="https://misaelmgcunha.github.io/Advocacia/" rel="nofollow" target="_blank" id="pr-lvp"><i class="fa-solid fa-eye"></i> Ver projeto</a>
+                        <a href="https://github.com/misaelmgcunha/Advocacia" rel="nofollow" target="_blank" id="pr-lgh"><i class="fa-brands fa-github"></i> Github</a>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- FIM DO MEUS PROJETOS DO SITE -->
+
+        <section id="contato"> <!-- CONTATO DO SITE -->
+            <h2>Meu <span>contato</span></h2>
+
+            <p class="ct-info"><i class="fa-solid fa-inbox"></i> misaelmgcunha.dev@gmail.com</p>
+            <p class="ct-info"><i class="fa-solid fa-phone"></i> (71) 992364374</p>
+            <p class="ct-info"><i class="fa-solid fa-location-dot"></i> Brasil, Bahia, Salvador</p>
+            
+            <a href="https://wa.me/5571992364374" rel="nofollow" target="_blank">Enviar mensagem <i class="fa-solid fa-arrow-right-long"></i></a>
+        </section>
+    </main>
+    <footer>
+        <h3>Misael Cunha</h3>
+        <div id="redes">
+            <a href="https://instagram.com/misaelmgcunha.dev" rel="nofollow" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/misael-cunha-8797a7259/" rel="nofollow" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Misaelmgcunha" rel="nofollow" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto: misaelmgcunha.dev@gmail.com" rel="nofollow" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="index.js"></script>
+</body>
+</html>

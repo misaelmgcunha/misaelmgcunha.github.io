@@ -1,0 +1,73 @@
+/* CONFIGURAÇÕES GERAIS */
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+    --fonte1: 'Inter', sans-serif; /* Texto */
+    --fonte2: 'Poppins', sans-serif; /* Título */
+
+    --cor1: #050D1A; /* Fundo */
+    --cor2: #0B1B35; /* Fundo 2*/
+    --cor3: #2466E0; /* Links */
+    --cor4: #168BFF; /* Destaque */
+    --cor5: #7AA7FF; /* Icones e Detalhes */
+    --cor6: #F1F5F9; /* Texto */
+    --cor7: #A7B5CA; /* Texto 2 */
+    --cor8: #1C3C65; /* Contorno e borda */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    section#inicio {
+        background-image: url(../imgs/banner-misael.png);
+    }
+
+    section#inicio > p#in-apre, section#inicio > p#in-funcao, section#inicio > div#in-redes, nav > ul > .nav-link > a, footer > div {
+        font-size: 1.5em;
+    }
+
+    section#inicio > h1, section#sobre-mim > div#sm-info > h2, section#habilidades > h2, section#projetos > h2, section#contato > h2 {
+        font-size: 2.3em;
+    }
+
+    section#sobre-mim > div#sm-info > img {
+        max-width: 240px;
+    }
+
+    section#inicio > p#in-info {
+        width: 350px;
+    }
+
+    section#sobre-mim > div#sm-info > p, section#inicio > div#in-links > a#in-projetos, section#inicio > div#in-links > a#in-contato {
+        width: 75%;
+        font-size: 1.1em;
+    }
+
+    section#sobre-mim > div#sm-info > div#sm-extra > div.c-extra > p.it-extra, section#projetos > div#pr-projetos > div.pr-projeto > h3, section#contato > p.ct-info {
+        font-size: 1.4em;
+    }
+    
+    section#sobre-mim >div#sm-info > div#sm-extra > div.c-extra > p.ii-extra, section#sobre-mim > div#sm-info > a, section#projetos > div#pr-projetos > div.pr-projeto > p, section#projetos > div#pr-projetos > div.pr-projeto > div#pr-links > a {
+        font-size: 1.2em;
+    }
+
+    section#inicio > p#in-info, section#habilidades > p, section#projetos > div#pr-projetos > div.pr-projeto > div.pr-tags > p, section#contato > a {
+        font-size: 1.3em;
+    }
+
+    footer > h3 {
+        font-size: 1.7em;
+    }
+
+    section#habilidades > div#hab-boxers {
+        grid-template-rows: repeat(2, 250px);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
