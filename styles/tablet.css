@@ -44,4 +44,25 @@
     .contact-actions { grid-column: 2; grid-template-columns: auto 1fr; align-items: center; }
     .contact-actions .button { width: fit-content; }
     .site-footer > p { order: initial; width: auto; }
+
+    .contact-cta {
+        display: grid;
+        grid-template-columns: auto 1fr; 
+        gap: 20px;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .contact-actions {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .contact-email {
+        white-space: nowrap;
+        overflow-wrap: normal;
+        font-size: 0.85rem;
+    }
 }

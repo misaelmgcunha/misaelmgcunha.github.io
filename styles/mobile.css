@@ -25,6 +25,7 @@ body {
     color: var(--marinho);
     font-family: var(--fonte-texto);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 body.menu-open { overflow: hidden; }
 a { color: inherit; }
@@ -244,6 +245,8 @@ section { scroll-margin-top: 82px; }
     display: grid; gap: 16px; margin-top: 68px; margin-bottom: 52px;
     padding: 25px 20px; border-radius: 18px; color: var(--branco); background: var(--azul);
     box-shadow: 0 12px 28px rgba(36,102,224,.18);
+    width: min(100% - 36px, var(--largura));
+    margin-inline: auto;
 }
 .contact-symbol { display: none; }
 .contact-copy .section-kicker { color: #DCE8FF; }
