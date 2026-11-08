@@ -1,98 +1,55 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+/* DESKTOP — a partir de 1024px */
+@media (min-width: 1024px) {
+    .section-container, .header-container, .site-footer { width: min(100% - 88px, var(--largura)); }
 
-:root {
-    --fonte1: 'Inter', sans-serif; /* Texto */
-    --fonte2: 'Poppins', sans-serif; /* Título */
+    .site-navigation { gap: 28px; }
+    .site-navigation ul { gap: 24px; }
+    .nav-link { font-size: .84rem; }
+    .header-cta { padding: 11px 18px; font-size: .82rem; }
 
-    --cor1: #050D1A; /* Fundo */
-    --cor2: #0B1B35; /* Fundo 2*/
-    --cor3: #2466E0; /* Links */
-    --cor4: #168BFF; /* Destaque */
-    --cor5: #7AA7FF; /* Icones e Detalhes */
-    --cor6: #F1F5F9; /* Texto */
-    --cor7: #A7B5CA; /* Texto 2 */
-    --cor8: #1C3C65; /* Contorno e borda */
-}
+    .hero { min-height: 440px; gap: 70px; padding-top: 66px; padding-bottom: 48px; }
+    .hero h1 { font-size: clamp(3.7rem, 5vw, 4.7rem); }
+    .hero-role { font-size: 1.35rem; }
+    .hero-description { font-size: 1.05rem; }
+    .hero-visual { width: min(100%, 370px); margin-right: 28px; }
+    .hero-social { margin-top: 25px; }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+    .content-section { padding-top: 88px; }
+    .section-heading { margin-bottom: 30px; }
+    .section-heading h2 { font-size: 2rem; }
+    .about-grid { gap: 70px; }
+    .about-copy p { font-size: 1rem; }
+    .about-details { padding: 24px; }
+    
+    .skills-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .skill-card { min-height: 155px; }
+    
+    .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .service-card { min-height: 145px; padding: 21px; }
+    
+    /* Correção do Grid de Projetos para Desktop (3 colunas alinhadas) */
+    .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .project-card { display: flex; flex-direction: column; }
+    .project-content { padding: 24px; }
+    .project-content h3 { font-size: 1.25rem; }
+    .project-content > p { font-size: .9rem; }
+    .project-coming { min-height: 100%; }
 
-@media screen and (min-width: 1024px) {
-    header > span#burguer,
-    nav#menus > span#close-burguer {
-        display: none;
+    .process-grid { gap: 42px; }
+    .process-step { gap: 15px; }
+    
+    .contact-cta {
+        grid-template-columns: 72px 1fr auto; gap: 24px;
+        margin-top: 90px; margin-bottom: 65px; padding: 30px 34px;
     }
-
-    nav#menus {
-        display: flex !important;
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        padding: 0;
-        z-index: auto;
+    .contact-symbol {
+        display: grid; width: 66px; height: 66px; place-items: center;
+        border: 1px solid rgba(255,255,255,.55); border-radius: 50%;
+        font-size: 1.8rem;
     }
-
-    nav#menus > ul {
-        flex-direction: row;
-        gap: 25px;
-        margin-top: 0;
-        align-items: center;
-    }
-
-    nav#menus > ul > .nav-link {
-        width: auto;
-        border-top: none;
-        padding-top: 0;
-    }
-
-    nav#menus > ul > .nav-link > a {
-        font-size: 1em;
-    }
-
-    nav#menus > ul > .nav-link#nav-cv {
-        background-color: var(--cor3);
-        padding: 8px 18px;
-        border-radius: 20px;
-        padding-bottom: 8px;
-        transition: background-color 0.2s ease;
-    }
-
-    nav#menus > ul > .nav-link#nav-cv > a {
-        color: var(--cor6);
-    }
-
-    nav#menus > ul > .nav-link#nav-cv:hover {
-        background-color: var(--cor4);
-    }
-
-    nav#menus > ul > .nav-link#nav-cv > a:hover {
-        font-weight: normal; 
-    }
-
-    header {
-        padding-right: 30px;
-    }
-
-    section#habilidades > div#hab-boxers {
-        grid-template-rows: repeat(1, 250px);
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    section#projetos > div#pr-projetos {
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    section#projetos > div#pr-projetos > div.pr-projeto {
-        max-width: 600px;
-        max-height: 600px;
-    }
+    .contact-copy h2 { font-size: 1.55rem; }
+    .contact-actions { grid-column: auto; display: flex; flex-direction: column; align-items: flex-start; }
+    .site-footer { min-height: 84px; }
 }

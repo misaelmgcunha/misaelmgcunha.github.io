@@ -1,31 +1,34 @@
-const burguer = document.getElementById('burguer');
-const menus = document.getElementById('menus');
+const menuToggle = document.getElementById("menu-toggle");
+const menuClose = document.getElementById("menu-close");
+const navigation = document.getElementById("site-navigation");
+const navigationLinks = navigation.querySelectorAll("a");
 
-function clickMenu() {
-    if (menus.style.display === 'flex') {
-        menus.style.display = 'none';
-        burguer.style.display = 'block';
-    } else {
-        menus.style.display = 'flex';
-        burguer.style.display = 'none';
-    }
+function openMenu() {
+    navigation.classList.add("is-open");
+    document.body.classList.add("menu-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Fechar menu");
 }
 
-document.querySelectorAll('#menus nav a, #menus .nav-link a').forEach(link => {
-link.addEventListener('click', () => {
-    menus.style.display = 'none';
-    if (window.innerWidth < 1024) {
-        burguer.style.display = 'flex';
-    }
-    });
+function closeMenu() {
+    navigation.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Abrir menu");
+}
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navigation.classList.contains("is-open");
+    isOpen ? closeMenu() : openMenu();
 });
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1024) {
-        burguer.style.display = 'none';
-        menus.style.display = 'flex';
-    } else {
-        burguer.style.display = 'block';
-        menus.style.display = 'none';
-    }
+menuClose.addEventListener("click", closeMenu);
+navigationLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 700) closeMenu();
 });

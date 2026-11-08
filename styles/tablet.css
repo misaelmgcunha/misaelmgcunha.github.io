@@ -1,73 +1,47 @@
-/* CONFIGURAÇÕES GERAIS */
-@charset 'UTF-8';
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+/* TABLET — a partir de 700px */
+@media (min-width: 700px) {
+    .section-container, .header-container, .site-footer { width: min(100% - 64px, var(--largura)); }
 
-:root {
-    --fonte1: 'Inter', sans-serif; /* Texto */
-    --fonte2: 'Poppins', sans-serif; /* Título */
-
-    --cor1: #050D1A; /* Fundo */
-    --cor2: #0B1B35; /* Fundo 2*/
-    --cor3: #2466E0; /* Links */
-    --cor4: #168BFF; /* Destaque */
-    --cor5: #7AA7FF; /* Icones e Detalhes */
-    --cor6: #F1F5F9; /* Texto */
-    --cor7: #A7B5CA; /* Texto 2 */
-    --cor8: #1C3C65; /* Contorno e borda */
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-    section#inicio {
-        background-image: url(../imgs/banner-misael.png);
+    .header-container { height: 74px; }
+    .menu-toggle, .menu-close { display: none; }
+    .site-navigation {
+        position: static; width: auto; height: auto; padding: 0; box-shadow: none;
+        background: transparent; transform: none; visibility: visible;
+        flex-direction: row; align-items: center; gap: 20px;
     }
+    .site-navigation ul { flex-direction: row; align-items: center; gap: 15px; }
+    .site-navigation li { border: 0; }
+    .nav-link { padding: 8px 2px; font-size: .78rem; }
+    .nav-cta { display: none; }
+    .header-cta { display: inline-flex !important; padding: 10px 13px; font-size: .78rem; }
 
-    section#inicio > p#in-apre, section#inicio > p#in-funcao, section#inicio > div#in-redes, nav > ul > .nav-link > a, footer > div {
-        font-size: 1.5em;
-    }
-
-    section#inicio > h1, section#sobre-mim > div#sm-info > h2, section#habilidades > h2, section#projetos > h2, section#contato > h2 {
-        font-size: 2.3em;
-    }
-
-    section#sobre-mim > div#sm-info > img {
-        max-width: 240px;
-    }
-
-    section#inicio > p#in-info {
-        width: 350px;
-    }
-
-    section#sobre-mim > div#sm-info > p, section#inicio > div#in-links > a#in-projetos, section#inicio > div#in-links > a#in-contato {
-        width: 75%;
-        font-size: 1.1em;
-    }
-
-    section#sobre-mim > div#sm-info > div#sm-extra > div.c-extra > p.it-extra, section#projetos > div#pr-projetos > div.pr-projeto > h3, section#contato > p.ct-info {
-        font-size: 1.4em;
-    }
+    .hero { grid-template-columns: 1.15fr .85fr; align-items: center; gap: 28px; padding-top: 58px; padding-bottom: 42px; }
+    .hero h1 { font-size: clamp(3rem, 6vw, 4rem); }
+    .hero-description { max-width: 440px; }
+    .hero-actions { flex-wrap: nowrap; }
+    .hero-actions .button { flex: 0 1 auto; }
+    .hero-visual { display: block; position: relative; width: min(100%, 330px); justify-self: end; }
     
-    section#sobre-mim >div#sm-info > div#sm-extra > div.c-extra > p.ii-extra, section#sobre-mim > div#sm-info > a, section#projetos > div#pr-projetos > div.pr-projeto > p, section#projetos > div#pr-projetos > div.pr-projeto > div#pr-links > a {
-        font-size: 1.2em;
-    }
+    .feature-strip { grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; padding: 15px 20px; }
+    .feature-separator { display: block; width: 1px; height: 22px; background: var(--azul-borda); }
 
-    section#inicio > p#in-info, section#habilidades > p, section#projetos > div#pr-projetos > div.pr-projeto > div.pr-tags > p, section#contato > a {
-        font-size: 1.3em;
-    }
+    .content-section { padding-top: 78px; }
+    .about-grid { grid-template-columns: 1.1fr .9fr; align-items: center; gap: 35px; }
+    .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+    .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    
+    /* Correção do Grid de Projetos para Tablet */
+    .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+    .project-card { display: flex; flex-direction: column; }
+    .project-image-link img { aspect-ratio: 16 / 9; object-fit: cover; }
+    .project-content { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .project-coming { min-height: 100%; display: flex; flex-direction: column; justify-content: center; }
 
-    footer > h3 {
-        font-size: 1.7em;
-    }
-
-    section#habilidades > div#hab-boxers {
-        grid-template-rows: repeat(2, 250px);
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .contact-cta { grid-template-columns: auto 1fr; align-items: center; padding: 30px; }
+    .contact-actions { grid-column: 2; grid-template-columns: auto 1fr; align-items: center; }
+    .contact-actions .button { width: fit-content; }
+    .site-footer > p { order: initial; width: auto; }
 }
